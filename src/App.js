@@ -5,7 +5,7 @@ import ProjectPage from './components/ProjectPage';
 
 function App() {
   return (
-    <Router>
+    <Router basename="/portfolio">
       <div>
         <Header />
       </div>
