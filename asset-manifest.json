@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.fbb31279.css",
-    "main.js": "/portfolio/static/js/main.6e190699.js",
+    "main.css": "/portfolio/static/css/main.47679c64.css",
+    "main.js": "/portfolio/static/js/main.265e9905.js",
     "static/js/787.1ed0c42c.chunk.js": "/portfolio/static/js/787.1ed0c42c.chunk.js",
     "static/media/COSC_4P82_Assignment_2.pdf": "/portfolio/static/media/COSC_4P82_Assignment_2.70edd3d2fd25e788f287.pdf",
     "static/media/Genetic_Algorithm_Report.pdf": "/portfolio/static/media/Genetic_Algorithm_Report.09666810755aaa1cd005.pdf",
@@ -41,12 +41,12 @@
     "static/media/verbal-communication.png": "/portfolio/static/media/verbal-communication.858d4e2dfe9eda0dfd6c.png",
     "static/media/Brock-University-Logo.webp": "/portfolio/static/media/Brock-University-Logo.b9f48002ec15586c2847.webp",
     "index.html": "/portfolio/index.html",
-    "main.fbb31279.css.map": "/portfolio/static/css/main.fbb31279.css.map",
-    "main.6e190699.js.map": "/portfolio/static/js/main.6e190699.js.map",
+    "main.47679c64.css.map": "/portfolio/static/css/main.47679c64.css.map",
+    "main.265e9905.js.map": "/portfolio/static/js/main.265e9905.js.map",
     "787.1ed0c42c.chunk.js.map": "/portfolio/static/js/787.1ed0c42c.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.fbb31279.css",
-    "static/js/main.6e190699.js"
+    "static/css/main.47679c64.css",
+    "static/js/main.265e9905.js"
   ]
 }
