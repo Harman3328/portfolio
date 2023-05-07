@@ -4,7 +4,6 @@ import "aos/dist/aos.css";
 import styles from "./Home.module.css"
 import { FaLinkedin, FaGithub, FaEnvelope, FaPhone } from 'react-icons/fa';
 import JobOnePopup from "./JobOnePopup";
-import ProjectPopup from "./ProjectPopup";
 import CanadaSummerGames from "../assets/canada-summer-games-2022.jpg";
 import AnimalerieRègneAnimal from "../assets/Animalerie-Règne-Animal.png"
 import Thelashbarco from "../assets/Thelashbarco.png"
@@ -48,28 +47,13 @@ function Home() {
     const [showPopupOne, setShowPopupOne] = useState(false);
     const [showPopupTwo, setShowPopupTwo] = useState(false);
     const [showPopupThree, setShowPopupThree] = useState(false);
-    const [showPopupFour, setShowPopupFour] = useState(false);
-    const [showPopupFive, setShowPopupFive] = useState(false);
-    const [showPopupSix, setShowPopupSix] = useState(false);
-    const [showPopupSeven, setShowPopupSeven] = useState(false);
-    const [showPopupEight, setShowPopupEight] = useState(false);
 
     useEffect(() => {
         AOS.init({ duration: 2000 })
     }, [])
 
-    function openPdf() {
-        window.open(resumePdf)
-    }
-
-    function scrollToSection() {
-        setTimeout(() => {
-            document.getElementById("popupProject").scrollIntoView({
-                behavior: "smooth",
-                block: "start",
-                inline: "nearest"
-            });
-        }, 200)
+    function openPdf(pdf) {
+        window.open(pdf)
     }
 
     function handlePopupOneButtonClick() {
@@ -94,51 +78,6 @@ function Home() {
 
     function handleCloseThreeButtonClick() {
         setShowPopupThree(false);
-    }
-
-    function handlePopupFourButtonClick() {
-        setShowPopupFour(true);
-        scrollToSection()
-    }
-
-    function handleCloseFourButtonClick() {
-        setShowPopupFour(false);
-    }
-
-    function handlePopupFiveButtonClick() {
-        setShowPopupFive(true);
-        scrollToSection()
-    }
-
-    function handleCloseFiveButtonClick() {
-        setShowPopupFive(false);
-    }
-
-    function handlePopupSixButtonClick() {
-        setShowPopupSix(true);
-        scrollToSection()
-    }
-
-    function handleCloseSixButtonClick() {
-        setShowPopupSix(false);
-    }
-
-    function handlePopupSevenButtonClick() {
-        setShowPopupSeven(true);
-        scrollToSection()
-    }
-
-    function handleCloseSevenButtonClick() {
-        setShowPopupSeven(false);
-    }
-
-    function handlePopupEightButtonClick() {
-        setShowPopupEight(true);
-        scrollToSection()
-    }
-
-    function handleCloseEightButtonClick() {
-        setShowPopupEight(false);
     }
 
     return (
@@ -628,10 +567,10 @@ function Home() {
                 </div>
             </div>
 
-            <div data-aos="fade-up" className={styles.projectContainer} id="projects">
-                <h2 className={styles.projectHeading}>Projects</h2>
+            <div className={styles.projectContainer} id="projects">
+                <h2 className={styles.projectHeading} data-aos="fade-up">Projects</h2>
                 <div className={styles.projectContainerInner}>
-                    <div className={`${styles.project} ${!showPopupFour ? styles.projectSpecial : ""}`}>
+                    <div className={styles.project } data-aos="fade-up">
                         <div className={styles.projectDetails}>
                             <h3 className={styles.projectTitle}>Evo Art and Procedural Textures</h3>
                             <p className={styles.projectDescription}>
@@ -642,13 +581,25 @@ function Home() {
                                 <li>Genetic Programming</li>
                                 <li>ECJ</li>
                             </ul>
-                            <button type="button" className={styles.projectLink} onClick={handlePopupFourButtonClick}>
-                                View Project
-                            </button>
+                            <div className={styles.projectButtons}>
+                                <a
+                                    href="https://github.com/Harman3328/Evo-Art-and-Procedural-Textures.git"
+                                    className={styles.projectCodeButton}
+                                >
+                                    Code
+                                </a>
+                                <button
+                                    type="button"
+                                    className={styles.projectViewButton}
+                                    onClick={() => openPdf(evoArtPdf)}
+                                >
+                                    View Project
+                                </button>
+                            </div>
                         </div>
                     </div>
 
-                    <div className={`${styles.project} ${!showPopupFive ? styles.projectSpecial : ""}`}>
+                    <div className={styles.project} data-aos="fade-up">
                         <div className={styles.projectDetails}>
                             <h3 className={styles.projectTitle}>Genetic Programming Cancer Diagnostic</h3>
                             <p className={styles.projectDescription}>
@@ -659,13 +610,25 @@ function Home() {
                                 <li>Genetic Programming</li>
                                 <li>ECJ</li>
                             </ul>
-                            <button type="button" className={styles.projectLink} onClick={handlePopupFiveButtonClick}>
-                                View Project
-                            </button>
+                            <div className={styles.projectButtons}>
+                                <a
+                                    href="https://github.com/Harman3328/Genetic-Programming--Cancer-Diagnostic.git"
+                                    className={styles.projectCodeButton}
+                                >
+                                    Code
+                                </a>
+                                <button
+                                    type="button"
+                                    className={styles.projectViewButton}
+                                    onClick={() => openPdf(GPCancerPdf)}
+                                >
+                                    View Project
+                                </button>
+                            </div>
                         </div>
                     </div>
 
-                    <div className={`${styles.project} ${!showPopupSix ? styles.projectSpecial : ""}`}>
+                    <div className={styles.project} data-aos="fade-up">
                         <div className={styles.projectDetails}>
                             <h3 className={styles.projectTitle}>Genetic Algorithms</h3>
                             <p className={styles.projectDescription}>
@@ -676,13 +639,25 @@ function Home() {
                                 <li>Uniform Crossover</li>
                                 <li>Modified Ordered Crossover</li>
                             </ul>
-                            <button type="button" className={styles.projectLink} onClick={handlePopupSixButtonClick}>
-                                View Project
-                            </button>
+                            <div className={styles.projectButtons}>
+                                <a
+                                    href="https://github.com/Harman3328/Genetic_Algorithms.git"
+                                    className={styles.projectCodeButton}
+                                >
+                                    Code
+                                </a>
+                                <button
+                                    type="button"
+                                    className={styles.projectViewButton}
+                                    onClick={() => openPdf(GeneticAlgorithmPdf)}
+                                >
+                                    View Project
+                                </button>
+                            </div>
                         </div>
                     </div>
 
-                    <div className={`${styles.project} ${!showPopupSeven ? styles.projectSpecial : ""}`}>
+                    <div className={styles.project} data-aos="fade-up">
                         <div className={styles.projectDetails}>
                             <h3 className={styles.projectTitle}>Chess Game</h3>
                             <p className={styles.projectDescription}>
@@ -694,13 +669,25 @@ function Home() {
                                 <li>Mini-max algorithm</li>
                                 <li>Alpha beta Pruning</li>
                             </ul>
-                            <button type="button" className={styles.projectLink} onClick={handlePopupSevenButtonClick}>
-                                View Project
-                            </button>
+                            <div className={styles.projectButtons}>
+                                <a
+                                    href="https://github.com/Harman3328/ChessGame.git"
+                                    className={styles.projectCodeButton}
+                                >
+                                    Code
+                                </a>
+                                <button
+                                    type="button"
+                                    className={styles.projectViewButton}
+                                    onClick={() => openPdf(chessGamePdf)}
+                                >
+                                    View Project
+                                </button>
+                            </div>
                         </div>
                     </div>
 
-                    <div className={`${styles.project} ${!showPopupEight ? styles.projectSpecial : ""}`}>
+                    <div className={styles.project} data-aos="fade-up">
                         <div className={styles.projectDetails}>
                             <h3 className={styles.projectTitle}>Poker</h3>
                             <p className={styles.projectDescription}>
@@ -710,13 +697,30 @@ function Home() {
                                 <li>Networking</li>
                                 <li>Java</li>
                             </ul>
-                            <button type="button" className={styles.projectLink} onClick={handlePopupEightButtonClick}>
-                                View Project
-                            </button>
+                            <ul className={styles.projectFeatures}>
+                                <li>Iterative deepening</li>
+                                <li>Mini-max algorithm</li>
+                                <li>Alpha beta Pruning</li>
+                            </ul>
+                            <div className={styles.projectButtons}>
+                                <a
+                                    href="https://github.com/Harman3328/Poker.git"
+                                    className={styles.projectCodeButton}
+                                >
+                                    Code
+                                </a>
+                                <button
+                                    type="button"
+                                    className={styles.projectViewButton}
+                                    onClick={() => openPdf(pokerPdf)}
+                                >
+                                    View Project
+                                </button>
+                            </div>
                         </div>
                     </div>
 
-                    <div className={`${styles.project} ${!showPopupOne ? styles.projectSpecial : ""}`}>
+                    <div className={styles.project} data-aos="fade-up">
                         <div className={styles.projectDetails}>
                             <h3 className={styles.projectTitle}>E-commerce website</h3>
                             <p className={styles.projectDescription}>
@@ -728,16 +732,18 @@ function Home() {
                                 <li>Node js</li>
                                 <li>SQL</li>
                             </ul>
-                            <a
-                                className={styles.projectLinkButton}
-                                href="https://github.com/Harman3328/E-commerce_website.git"
-                            >
-                                View Project
-                            </a>
+                            <div className={styles.projectButtons}>
+                                <a
+                                    href="https://github.com/Harman3328/E-commerce_website.git"
+                                    className={styles.projectCodeButton}
+                                >
+                                    Code
+                                </a>
+                            </div>
                         </div>
                     </div>
 
-                    <div className={`${styles.project} ${!showPopupOne ? styles.projectSpecial : ""}`}>
+                    <div className={styles.project} data-aos="fade-up">
                         <div className={styles.projectDetails}>
                             <h3 className={styles.projectTitle}>Login System </h3>
                             <p className={styles.projectDescription}>
@@ -748,16 +754,18 @@ function Home() {
                                 <li>Spring Boot</li>
                                 <li>CSS/Bootstrap</li>
                             </ul>
-                            <a
-                                className={styles.projectLinkButton}
-                                href="https://github.com/Harman3328/Login_System.git"
-                            >
-                                View Project
-                            </a>
+                            <div className={styles.projectButtons}>
+                                <a
+                                    href="https://github.com/Harman3328/Login_System.git"
+                                    className={styles.projectCodeButton}
+                                >
+                                    Code
+                                </a>
+                            </div>
                         </div>
                     </div>
 
-                    <div className={`${styles.project} ${!showPopupOne ? styles.projectSpecial : ""}`}>
+                    <div className={styles.project} data-aos="fade-up">
                         <div className={styles.projectDetails}>
                             <h3 className={styles.projectTitle}>Wishlist Website</h3>
                             <p className={styles.projectDescription}>
@@ -770,15 +778,17 @@ function Home() {
                                 <li>PHP</li>
                                 <li>Django</li>
                             </ul>
-                            <a
-                                className={styles.projectLinkButton}
-                                href="https://github.com/Harman3328/Wishlist_website.git"
-                            >
-                                View Project
-                            </a>
+                            <div className={styles.projectButtons}>
+                                <a
+                                    href="https://github.com/Harman3328/Wishlist_website.git"
+                                    className={styles.projectCodeButton}
+                                >
+                                    Code
+                                </a>
+                            </div>
                         </div>
                     </div>
-                    <div className={`${styles.project} ${!showPopupOne ? styles.projectSpecial : ""}`}>
+                    <div className={styles.project} data-aos="fade-up">
                         <div className={styles.projectDetails}>
                             <h3 className={styles.projectTitle}>Neural Network</h3>
                             <p className={styles.projectDescription}>
@@ -789,89 +799,22 @@ function Home() {
                                 <li>Neural Network</li>
                                 <li>backpropogation</li>
                             </ul>
-                            <a
-                                className={styles.projectLinkButton}
-                                href="https://github.com/Harman3328/Neural_Network.git"
-                            >
-                                View Project
-                            </a>
+                            <div className={styles.projectButtons}>
+                                <a
+                                    href="https://github.com/Harman3328/Neural_Network.git"
+                                    className={styles.projectCodeButton}
+                                >
+                                    Code
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <ProjectPopup trigger={showPopupFour} setTrigger={handleCloseFourButtonClick}>
-                    <h3 className={styles.popTitle}>Evo Art and Procedural Textures</h3>
-                    <object data={evoArtPdf} type="application/pdf" width="100%" height="600px">
-                        <p>This browser does not support PDFs. Please download the PDF to view it:
-                            <a href={evoArtPdf}>Download PDF</a>.</p>
-                    </object>
-                    <a
-                        className={styles.projectButton}
-                        href="https://github.com/Harman3328/Evo-Art-and-Procedural-Textures.git"
-                    >
-                        Code
-                    </a>
-                </ProjectPopup>
-
-                <ProjectPopup trigger={showPopupFive} setTrigger={handleCloseFiveButtonClick}>
-                    <h3 className={styles.popTitle}>Genetic Programming Cancer Diagnostic</h3>
-                    <object data={GPCancerPdf} type="application/pdf" width="100%" height="600px">
-                        <p>This browser does not support PDFs. Please download the PDF to view it:
-                            <a href={GPCancerPdf}>Download PDF</a>.</p>
-                    </object>
-                    <a
-                        className={styles.projectButton}
-                        href="https://github.com/Harman3328/Genetic-Programming--Cancer-Diagnostic.git"
-                    >
-                        Code
-                    </a>
-                </ProjectPopup>
-
-                <ProjectPopup trigger={showPopupSix} setTrigger={handleCloseSixButtonClick}>
-                    <h3 className={styles.popTitle}>Genetic Algorithms</h3>
-                    <object data={GeneticAlgorithmPdf} type="application/pdf" width="100%" height="600px">
-                        <p>This browser does not support PDFs. Please download the PDF to view it:
-                            <a href={GeneticAlgorithmPdf}>Download PDF</a>.</p>
-                    </object>
-                    <a
-                        className={styles.projectButton}
-                        href="https://github.com/Harman3328/Genetic_Algorithms.git"
-                    >
-                        Code
-                    </a>
-                </ProjectPopup>
-
-                <ProjectPopup trigger={showPopupSeven} setTrigger={handleCloseSevenButtonClick}>
-                    <h3 className={styles.popTitle}>Chess Game</h3>
-                    <object data={chessGamePdf} type="application/pdf" width="100%" height="600px">
-                        <p>This browser does not support PDFs. Please download the PDF to view it:
-                            <a href={chessGamePdf}>Download PDF</a>.</p>
-                    </object>
-                    <a
-                        className={styles.projectButton}
-                        href="https://github.com/Harman3328/ChessGame.git"
-                    >
-                        Code
-                    </a>
-                </ProjectPopup>
-
-                <ProjectPopup trigger={showPopupEight} setTrigger={handleCloseEightButtonClick}>
-                    <h3 className={styles.popTitle}>Poker</h3>
-                    <object data={pokerPdf} type="application/pdf" width="100%" height="600px">
-                        <p>This browser does not support PDFs. Please download the PDF to view it:
-                            <a href={pokerPdf}>Download PDF</a>.</p>
-                    </object>
-                    <a
-                        className={styles.projectButton}
-                        href="https://github.com/Harman3328/Poker.git"
-                    >
-                        Code
-                    </a>
-                </ProjectPopup>
             </div>
 
             <div className={styles.contactContainer} id="contact">
-                <h2 className={styles.contactHeading}>Contact</h2>
-                <div className={styles.contactCard}>
+                <h2 className={styles.contactHeading} data-aos="fade-up">Contact</h2>
+                <div className={styles.contactCard} data-aos="fade-up">
                     <div className={styles.contactCardContent}>
                         <h1>Harmandeep Mangat</h1>
                         <p className={styles.contactTitle}>Full Stack Developer</p>
@@ -891,7 +834,7 @@ function Home() {
                             </a>
                         </div>
                     </div>
-                    <p><button className={styles.contactButton} onClick={openPdf}>Resume</button></p>
+                    <p><button className={styles.contactButton} onClick={() => openPdf(resumePdf)}>Resume</button></p>
                 </div>
             </div>
         </div>
