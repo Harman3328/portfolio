@@ -62,6 +62,16 @@ function Home() {
         window.open(resumePdf)
     }
 
+    function scrollToSection() {
+        setTimeout(() => {
+            document.getElementById("popupProject").scrollIntoView({
+                behavior: "smooth",
+                block: "start",
+                inline: "nearest"
+            });
+        },200)
+    }
+
     function handlePopupOneButtonClick() {
         setShowPopupOne(true);
     }
@@ -88,6 +98,7 @@ function Home() {
 
     function handlePopupFourButtonClick() {
         setShowPopupFour(true);
+        scrollToSection()
     }
 
     function handleCloseFourButtonClick() {
@@ -96,6 +107,7 @@ function Home() {
 
     function handlePopupFiveButtonClick() {
         setShowPopupFive(true);
+        scrollToSection()
     }
 
     function handleCloseFiveButtonClick() {
@@ -104,6 +116,7 @@ function Home() {
 
     function handlePopupSixButtonClick() {
         setShowPopupSix(true);
+        scrollToSection()
     }
 
     function handleCloseSixButtonClick() {
@@ -112,6 +125,7 @@ function Home() {
 
     function handlePopupSevenButtonClick() {
         setShowPopupSeven(true);
+        scrollToSection()
     }
 
     function handleCloseSevenButtonClick() {
@@ -120,6 +134,7 @@ function Home() {
 
     function handlePopupEightButtonClick() {
         setShowPopupEight(true);
+        scrollToSection()
     }
 
     function handleCloseEightButtonClick() {
