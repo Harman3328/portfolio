@@ -69,7 +69,7 @@ function Home() {
                 block: "start",
                 inline: "nearest"
             });
-        },200)
+        }, 200)
     }
 
     function handlePopupOneButtonClick() {
@@ -471,7 +471,7 @@ function Home() {
                         designing a relational database system, and developing websites. I also interned at a software
                         development company, where I worked on a team to develop and test new software features. I also
                         worked for small businesses, where I developed websites and designed databases.
-                        Through my studies, I worked on personal projects, where I learned new languages and
+                        Throughout my studies, I worked on personal projects, where I learned new languages and
                         technologies to further improve my skills.
                     </p>
                 </div>
@@ -800,7 +800,10 @@ function Home() {
                 </div>
                 <ProjectPopup trigger={showPopupFour} setTrigger={handleCloseFourButtonClick}>
                     <h3 className={styles.popTitle}>Evo Art and Procedural Textures</h3>
-                    <embed src={evoArtPdf} type="application/pdf" width="100%" height="600px" />
+                    <object data={evoArtPdf} type="application/pdf" width="100%" height="600px">
+                        <p>This browser does not support PDFs. Please download the PDF to view it:
+                            <a href={evoArtPdf}>Download PDF</a>.</p>
+                    </object>
                     <a
                         className={styles.projectButton}
                         href="https://github.com/Harman3328/Evo-Art-and-Procedural-Textures.git"
@@ -811,7 +814,10 @@ function Home() {
 
                 <ProjectPopup trigger={showPopupFive} setTrigger={handleCloseFiveButtonClick}>
                     <h3 className={styles.popTitle}>Genetic Programming Cancer Diagnostic</h3>
-                    <embed src={GPCancerPdf} type="application/pdf" width="100%" height="600px" />
+                    <object data={GPCancerPdf} type="application/pdf" width="100%" height="600px">
+                        <p>This browser does not support PDFs. Please download the PDF to view it:
+                            <a href={GPCancerPdf}>Download PDF</a>.</p>
+                    </object>
                     <a
                         className={styles.projectButton}
                         href="https://github.com/Harman3328/Genetic-Programming--Cancer-Diagnostic.git"
@@ -822,7 +828,10 @@ function Home() {
 
                 <ProjectPopup trigger={showPopupSix} setTrigger={handleCloseSixButtonClick}>
                     <h3 className={styles.popTitle}>Genetic Algorithms</h3>
-                    <embed src={GeneticAlgorithmPdf} type="application/pdf" width="100%" height="600px" />
+                    <object data={GeneticAlgorithmPdf} type="application/pdf" width="100%" height="600px">
+                        <p>This browser does not support PDFs. Please download the PDF to view it:
+                            <a href={GeneticAlgorithmPdf}>Download PDF</a>.</p>
+                    </object>
                     <a
                         className={styles.projectButton}
                         href="https://github.com/Harman3328/Genetic_Algorithms.git"
@@ -833,7 +842,10 @@ function Home() {
 
                 <ProjectPopup trigger={showPopupSeven} setTrigger={handleCloseSevenButtonClick}>
                     <h3 className={styles.popTitle}>Chess Game</h3>
-                    <embed src={chessGamePdf} type="application/pdf" width="100%" height="600px" />
+                    <object data={chessGamePdf} type="application/pdf" width="100%" height="600px">
+                        <p>This browser does not support PDFs. Please download the PDF to view it:
+                            <a href={chessGamePdf}>Download PDF</a>.</p>
+                    </object>
                     <a
                         className={styles.projectButton}
                         href="https://github.com/Harman3328/ChessGame.git"
@@ -844,7 +856,10 @@ function Home() {
 
                 <ProjectPopup trigger={showPopupEight} setTrigger={handleCloseEightButtonClick}>
                     <h3 className={styles.popTitle}>Poker</h3>
-                    <embed src={pokerPdf} type="application/pdf" width="100%" height="600px" />
+                    <object data={pokerPdf} type="application/pdf" width="100%" height="600px">
+                        <p>This browser does not support PDFs. Please download the PDF to view it:
+                            <a href={pokerPdf}>Download PDF</a>.</p>
+                    </object>
                     <a
                         className={styles.projectButton}
                         href="https://github.com/Harman3328/Poker.git"
