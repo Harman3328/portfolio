@@ -387,6 +387,10 @@ body {
 @media (max-width: 480px) {
     .name {
         font-size: 50px;
-        margin-top: 20%;
+        margin-top: 23%;
+    }
+
+    .contactCard {
+        width: 350px;
     }
 }
