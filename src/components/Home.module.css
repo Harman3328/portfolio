@@ -297,7 +297,7 @@ body {
 
 .contactCard {
     position: absolute;
-    width: 30%;
+    width: 400px;
     margin-bottom: 50px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.9);
     transition: all 0.3s ease-in-out;
@@ -340,11 +340,25 @@ body {
     color: inherit;
 }
 
+.cardSocialLinks a:hover {
+    color: blue;
+}
+
 .contactCardContent {
     margin-left: 1%;
 }
 
+@media screen and (max-width: 1195px) {
+    .name {
+        font-size: 100px;
+    }
+}
+
 @media (max-width: 768px) {
+    .name {
+        font-size: 50px;
+    }
+
     .cardGroup {
         flex-direction: column;
     }

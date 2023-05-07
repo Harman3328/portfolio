@@ -839,7 +839,7 @@ function Home() {
                 </ProjectPopup>
             </div>
 
-            <div data-aos="fade-up" className={styles.contactContainer} id="contact">
+            <div className={styles.contactContainer} id="contact">
                 <h2 className={styles.contactHeading}>Contact</h2>
                 <div className={styles.contactCard}>
                     <div className={styles.contactCardContent}>
