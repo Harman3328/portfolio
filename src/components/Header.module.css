@@ -8,21 +8,16 @@
 
 .inList {
     float: left;
-
-}
-
-.inList .link {
-    display: block;
     color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
+    padding: 10px;
+    cursor: pointer;
 }
 
-/* Change the link color to #111 (black) on hover */
-.inList .link:hover {
-    background-color: #111;
+.navLink:hover {
+    color: #ffcc00;
+    cursor: pointer;
 }
+
 
 .header {
     position: fixed;
@@ -31,4 +26,9 @@
     right: 0;
     z-index: 999;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
 }
+
+.active {
+    color: #ffcc00;
+  }
